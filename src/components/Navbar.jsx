@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import logoM from "../assets/images/logo.png";
 // ── Theme ──────────────────────────────────────────────────────
 const C = {
   pri: "#136360",
@@ -127,7 +126,7 @@ export default function Navbar({ activePage = "Home" }) {
           }}
         >
           <img
-            src={logoM}
+            src="/images/logo.png" // {logoM} ki jagah ye string likhein
             alt="SolvixAiTech"
             style={{
               width: 304,
