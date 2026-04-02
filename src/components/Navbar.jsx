@@ -126,7 +126,7 @@ export default function Navbar({ activePage = "Home" }) {
           }}
         >
           <img
-            src="/images/logo.PNG" // {logoM} ki jagah ye string likhein
+            src="/images/logo.png" // {logoM} ki jagah ye string likhein
             alt="SolvixAiTech"
             style={{
               width: 304,
