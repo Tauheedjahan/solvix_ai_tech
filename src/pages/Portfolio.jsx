@@ -2,13 +2,6 @@ import { useState, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import Navbar from "../components/Navbar";
 
-import ecommerceStore from "../assets/images/ecommerce-store.png";
-import healthcare from "../assets/images/health-care.png";
-import healthfood from "../assets/images/health-food.png";
-import artmuseum from "../assets/images/art-museum.png";
-import carcity from "../assets/images/car-city.png";
-import jobportal from "../assets/images/job-portal.png";
-
 function Reveal({ children, delay = 0, y = 28 }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-50px" });
@@ -69,234 +62,74 @@ const IcoEye = () => (
 
 // ── 24 projects, 6 per category ─────────────────────────────
 const PROJECTS = [
-  // Landing Pages
   {
     id: 1,
-    cat: "Landing Pages",
-    title: "HealthCare Landing",
-    desc: "Clean, conversion-focused landing page for a healthcare service provider.",
-    tech: ["React", "Tailwind", "Vite"],
-    img: healthcare,
-    link: "https://www.template-helpandcare.de.rs/",
+    cat: "E-Commerce Websites",
+    title: "Skincare Website",
+    img: "/images/ecommerce_1.png",
+    link: "https://govind-ecommerce.netlify.app/",
   },
   {
     id: 2,
-    cat: "Landing Pages",
-    title: "Health & Food Brand Page",
-    desc: "Wellness brand landing with meal plans, blog preview and nutritionist CTA.",
-    tech: ["Next.js", "CSS Modules", "Vite"],
-    img: healthfood,
-    link: "https://www.template-healthandfood.de.rs/",
+    cat: "UI/UX Design",
+    title: "Grocery Template",
+    img: "/images/uiux_2.png",
+    link: "https://chal-dal.vercel.app/",
   },
   {
     id: 3,
-    cat: "Landing Pages",
-    title: "Art Museum Explorer",
-    desc: "Cultural institution landing with collections gallery and event calendar.",
-    tech: ["React", "GSAP", "Maps API"],
-    img: artmuseum,
-    link: "https://www.template-artmuseum.de.rs/",
+    cat: "UI/UX Design",
+    title: "Apparel Brand",
+    img: "/images/uiux_1.png",
+    link: "https://avnish344.github.io/Ecommerce-Website/",
   },
   {
     id: 4,
-    cat: "Landing Pages",
-    title: "Fashion Store Landing",
-    desc: "Bold e-commerce landing page with hero slider and product highlights.",
-    tech: ["Next.js", "Stripe", "Tailwind"],
-    img: ecommerceStore,
-    link: "https://www.template-ashop.de.rs/",
+    cat: "Business Websites",
+    title: "Performance",
+    img: "/images/business_3.png",
+    link: "https://avnish344.github.io/Ecommerce-Website/",
   },
   {
     id: 5,
-    cat: "Landing Pages",
-    title: "Car Rental Service Page",
-    desc: "Sleek auto rental landing with live booking calendar and vehicle showcase.",
-    tech: ["React", "MongoDB", "Framer"],
-    img: carcity,
-    link: "https://www.template-carcity.de.rs/",
+    cat: "Business Websites",
+    title: "Studio",
+    img: "/images/business_4.png",
+    link: "https://olliestudio.framer.website/",
   },
   {
     id: 6,
-    cat: "Landing Pages",
-    title: "Career Jobs Landing",
-    desc: "Job portal landing with category filters, featured listings and sign-up CTA.",
-    tech: ["React", "Framer Motion", "Vite"],
-    img: jobportal,
-    link: "https://www.template-careerjobs.de.rs/",
+    cat: "Web Applications",
+    title: "Jewelry Web App",
+    img: "/images/webapp_1.png",
+    link: "https://templatemo.com/live/templatemo_611_maison_doree",
   },
-
-  // Business Websites
   {
     id: 7,
-    cat: "Business Websites",
-    title: "ShopFlow E-Commerce",
-    desc: "Full-featured clothing store with cart, checkout, and inventory management.",
-    tech: ["Next.js", "Stripe", "Tailwind"],
-    img: ecommerceStore,
-    link: "https://www.template-ashop.de.rs/",
+    cat: "Web Applications",
+    title: "Chain App",
+    img: "/images/webapp_2.png",
+    link: "https://templatemo.com/live/templatemo_570_chain_app_dev",
+  },
+  {
+    id: 7,
+    cat: "Web Applications",
+    title: "Bakery Web App",
+    img: "/images/webapp_3.png",
+    link: "https://templatemo.com/live/templatemo_613_frost_bakery",
   },
   {
     id: 8,
     cat: "Business Websites",
-    title: "Art Museum Website",
-    desc: "Multi-page museum website with collections, events and online ticketing.",
-    tech: ["React", "Node.js", "Maps API"],
-    img: artmuseum,
-    link: "https://www.template-artmuseum.de.rs/",
-  },
-  {
-    id: 9,
-    cat: "Business Websites",
-    title: "Help & Care Website",
-    desc: "Healthcare service website with doctor profiles, services and appointment CTA.",
-    tech: ["React", "PostgreSQL", "AWS"],
-    img: healthcare,
-    link: "https://www.template-helpandcare.de.rs/",
-  },
-  {
-    id: 10,
-    cat: "Business Websites",
-    title: "Health & Food Business",
-    desc: "Nutrition business site with blog, recipe library and coaching packages.",
-    tech: ["Next.js", "Tailwind", "Vite"],
-    img: healthfood,
-    link: "https://www.template-healthandfood.de.rs/",
-  },
-  {
-    id: 11,
-    cat: "Business Websites",
-    title: "Carcity Auto Platform",
-    desc: "Premium auto dealership with inventory filters, comparisons and test booking.",
-    tech: ["Next.js", "MongoDB", "AWS"],
-    img: carcity,
-    link: "https://www.template-carcity.de.rs/",
-  },
-  {
-    id: 12,
-    cat: "Business Websites",
-    title: "Job Portal Platform",
-    desc: "Recruitment website connecting employers and job seekers with smart matching.",
-    tech: ["React", "Framer", "Node.js"],
-    img: jobportal,
-    link: "https://www.template-careerjobs.de.rs/",
-  },
-
-  // Web Applications
-  {
-    id: 13,
-    cat: "Web Applications",
-    title: "Museum Collection App",
-    desc: "Interactive web app for exploring museum collections with advanced search.",
-    tech: ["React", "D3.js", "Node.js"],
-    img: artmuseum,
-    link: "https://www.template-artmuseum.de.rs/",
-  },
-  {
-    id: 14,
-    cat: "Web Applications",
-    title: "ShopFlow Commerce App",
-    desc: "E-commerce web app with real-time cart sync, wishlist and order tracking.",
-    tech: ["React", "Node.js", "Stripe"],
-    img: ecommerceStore,
-    link: "https://www.template-ashop.de.rs/",
-  },
-  {
-    id: 15,
-    cat: "Web Applications",
-    title: "MediTrack Patient App",
-    desc: "Patient management app with EHR access, billing and appointment scheduling.",
-    tech: ["React", "PostgreSQL", "Node.js"],
-    img: healthcare,
-    link: "https://www.template-helpandcare.de.rs/",
-  },
-  {
-    id: 16,
-    cat: "Web Applications",
-    title: "Wellness Tracker App",
-    desc: "Nutrition and fitness tracking app with meal logging and progress analytics.",
-    tech: ["React", "Firebase", "Chart.js"],
-    img: healthfood,
-    link: "https://www.template-healthandfood.de.rs/",
-  },
-  {
-    id: 17,
-    cat: "Web Applications",
-    title: "FleetTrack IoT Dashboard",
-    desc: "Live dashboard for fleet vehicle tracking with alerts and route history.",
-    tech: ["React", "Python", "MQTT"],
-    img: carcity,
-    link: "https://www.template-carcity.de.rs/",
-  },
-  {
-    id: 18,
-    cat: "Web Applications",
-    title: "HireHub Recruitment App",
-    desc: "End-to-end hiring platform with ATS, interview scheduling and team analytics.",
-    tech: ["React", "Node.js", "MongoDB"],
-    img: jobportal,
-    link: "https://www.template-careerjobs.de.rs/",
-  },
-
-  // UI/UX Design
-  {
-    id: 19,
-    cat: "UI/UX Design",
-    title: "Museum UX Design",
-    desc: "Full UX redesign with user research, wireframes and accessible design system.",
-    tech: ["Figma", "Prototyping", "Research"],
-    img: artmuseum,
-    link: "https://www.template-artmuseum.de.rs/",
-  },
-  {
-    id: 20,
-    cat: "UI/UX Design",
-    title: "E-Commerce UX Redesign",
-    desc: "UX audit and redesign that improved conversion rate by 42% for an online retailer.",
-    tech: ["Figma", "A/B Testing", "Research"],
-    img: ecommerceStore,
-    link: "https://www.template-ashop.de.rs/",
-  },
-  {
-    id: 21,
-    cat: "UI/UX Design",
-    title: "Health App UI System",
-    desc: "End-to-end design system and mobile-first UI for a digital health application.",
-    tech: ["Figma", "Design System", "Tokens"],
-    img: healthcare,
-    link: "https://www.template-helpandcare.de.rs/",
-  },
-  {
-    id: 22,
-    cat: "UI/UX Design",
-    title: "Food & Wellness UI",
-    desc: "Visual identity and UI with rich motion design for a wellness subscription brand.",
-    tech: ["Figma", "After Effects", "CSS"],
-    img: healthfood,
-    link: "https://www.template-healthandfood.de.rs/",
-  },
-  {
-    id: 23,
-    cat: "UI/UX Design",
-    title: "Auto Platform UX",
-    desc: "User journey mapping and interface redesign for a premium car rental web app.",
-    tech: ["Figma", "Wireframes", "Testing"],
-    img: carcity,
-    link: "https://www.template-carcity.de.rs/",
-  },
-  {
-    id: 24,
-    cat: "UI/UX Design",
-    title: "Job Portal UX Research",
-    desc: "Discovery, personas and interaction design for a smart job matching platform.",
-    tech: ["Figma", "Research", "Prototyping"],
-    img: jobportal,
-    link: "https://www.template-careerjobs.de.rs/",
+    title: "Travel Agency",
+    img: "/images/business_5.png",
+    link: "https://www.tooplate.com/live/2095_level",
   },
 ];
 
 const CATEGORIES = [
   "All",
-  "Landing Pages",
+  "E-Commerce Websites",
   "Business Websites",
   "Web Applications",
   "UI/UX Design",
@@ -336,29 +169,10 @@ function PfCard({ p, i }) {
       {/* Body */}
       <div className="pf-card-body">
         {/* Category badge */}
-        <span className="pf-card-cat">{p.cat}</span>
         {/* Title */}
         <div className="pf-card-title">{p.title}</div>
-        {/* Description */}
-        <div className="pf-card-desc">{p.desc}</div>
-        {/* Tech tags */}
-        <div className="pf-tech-row">
-          {p.tech.map((t) => (
-            <span key={t} className="pf-tech-tag">
-              {t}
-            </span>
-          ))}
-        </div>
         {/* Buttons */}
         <div className="pf-card-btns">
-          <a
-            href={p.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="pf-btn-live"
-          >
-            <IcoLink /> Live Demo
-          </a>
           <a
             href={p.link}
             target="_blank"
